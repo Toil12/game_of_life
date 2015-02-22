@@ -1,0 +1,8 @@
+screen:960 600
+blocks:240 150
+wrap_around:1
+fg:128 255 0
+bg:0 0 0
+init_rand_threshold:1500
+rules_for_alive_live:4 5 6
+rules_for_dead_live:3 4 5

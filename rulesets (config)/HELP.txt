@@ -1,0 +1,68 @@
+# help + predvoleny config
+# klavesy:
+#	spacebar = pauza alebo krok (ked je zastavena simulacia)
+#	P = zastavenie/pokracovanie simulacie
+#	F = zobraz/skry FPS
+#	C = vymaz vsetky zivoty
+#	R = od zaciatku
+#	S = ulozit ako block
+#	L = nacitat blok
+# + mys
+
+#velkost okna
+#cela obrazovka = screen:full
+screen:800 600
+
+#pocet blokov (neudane = polovica screenu)
+blocks:0 0
+
+#vytvorenie nekonecnej mapy
+#prejdenie za hranicu = objavenie sa na protilahlej strane
+wrap_around:0
+
+#farby
+#R G B
+fg:0 0 0
+bg:255 255 255
+
+#FPS limit
+#0=neobmedzeny
+fps:60
+
+#nastavenie nahodnych generatorov
+#ako casto bude true
+#z <0;10000>
+#random pri inicializacii mapy
+init_rand_threshold:2500
+#random pri aplikovani random stavu v pravidle
+rules_rand_threshold:2000
+
+#povolit pocitadlo zijucich susedov
+enable_counter:1
+
+#na co inicializovat mapu
+#z {0;1;2(random podla init_rand_threshold)}
+map_default:2
+
+#na co inicializovat ruleset
+#z {0(dies);1(lives);2(rand);3(same)}
+ruleset_default:0
+
+#popis pravidiel
+#hodnoty oznacuju pre aky pocet susedov sa pravidlo aplikuje
+#s prefixom "rules_for_dead_" sa aplikuju len pre mrtve
+#s prefixom "rules_for_alive_" sa aplikuju len pre zive
+#bez prefixu sa aplikuju aj pre mrtve aj pre zive
+#skape
+rules_for_dead_die:0
+dies:1
+#zije
+live:2
+rules_for_alive_lives:3
+#nahodne sa urci ci bude zit (podla rules_rand_threshold)
+rand:4
+rands:5
+#stav bunky ostane taky ako predtym
+keep:6
+keeps:7
+same:8

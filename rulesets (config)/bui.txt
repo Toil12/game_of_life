@@ -1,0 +1,5 @@
+screen:450 450
+map_default:1
+ruleset_default:1
+dies:2 3 5
+fps:0
