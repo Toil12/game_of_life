@@ -1,5 +1,5 @@
 screen:full
-blocks:320 200
+blocks:480 270
 wrap_around:1
 fg:128 255 0
 bg:0 0 0
