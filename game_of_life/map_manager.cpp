@@ -29,8 +29,10 @@ wstring map_manager::file_chooser(bool savedialog,HWND window)
 	DWORD flags=OFN_DONTADDTORECENT | OFN_PATHMUSTEXIST;
 	if (!savedialog)flags|=OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 	else flags|=OFN_OVERWRITEPROMPT;
+	wchar_t cdb[MAX_PATH];
+	GetCurrentDirectory(MAX_PATH,cdb);
 	OPENFILENAME ofn={sizeof(OPENFILENAME),window,NULL,L"GOA saves\0*.gos\0All files\0*.*\0\0",NULL,NULL,0,buf,MAX_PATH,
-		NULL,0,NULL,NULL,flags,0,0,L"txt",NULL,NULL,NULL,NULL,0,0};
+		NULL,0,cdb,NULL,flags,0,0,L"txt",NULL,NULL,NULL,NULL,0,0};
 	BOOL dret=(!savedialog ? GetOpenFileName(&ofn) : GetSaveFileName(&ofn));
 	if (window)SetForegroundWindow(window);
 	if (dret)return ofn.lpstrFile;
