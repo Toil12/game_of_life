@@ -5,7 +5,7 @@ https://en.wikipedia.org/wiki/Cellular_automaton
 http://mmatejg.com/game_of_life.zip
 
 ### ...help?!
-see `/rulesets (config)/HELP.txt`
+see `/config/HELP.txt`
 
 > Wild SOURCE CODE appeared!
 
